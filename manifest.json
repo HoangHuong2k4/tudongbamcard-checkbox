@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Click Card & Checkbox",
+  "version": "1.0.0",
+  "description": "Tự động bấm mở card form và check checkbox trên trang thanh toán OpenAI",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://pay.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://pay.openai.com/c/pay/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "settings.html"
+  }
+}
