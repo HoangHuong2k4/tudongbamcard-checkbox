@@ -1,0 +1,24 @@
+{
+  "name": "tudongbamcard-checkbox",
+  "version": "1.0.0",
+  "description": "Extension Chrome tự động điền dữ liệu, bấm mở card form và check checkbox trên trang thanh toán OpenAI ChatGPT.",
+  "main": "background.js",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoangHuong2k4/tudongbamcard-checkbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoangHuong2k4/tudongbamcard-checkbox/issues"
+  },
+  "homepage": "https://github.com/HoangHuong2k4/tudongbamcard-checkbox#readme",
+  "devDependencies": {
+    "javascript-obfuscator": "^5.1.0"
+  }
+}
