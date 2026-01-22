@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "description": "Tự động bấm mở card form và check checkbox trên trang thanh toán OpenAI",
   "icons": {
-    "16": "icon16.png",
-    "32": "icon32.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
   },
   "permissions": [
     "tabs",
@@ -19,18 +19,51 @@
     "https://pay.openai.com/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://pay.openai.com/c/pay/*"],
-      "js": ["config.js", "content.js"],
-      "css": ["custom.css"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "captcha-solvers/simple-captcha-solver.js",
+        "captcha-solvers/hcaptcha-solver/deepbypasser/captcha-detector.js",
+        "captcha-solvers/hcaptcha-solver/deepbypasser/hcaptcha-injector.js",
+        "captcha-solvers/hcaptcha-solver/deepbypasser/hcaptcha-interceptor.js",
+        "captcha-solvers/hcaptcha-solver/deepbypasser/captcha-handler.js",
+        "captcha-solvers/hcaptcha-solver/deepbypasser/captcha-solver.js",
+        "captcha-solvers/hcaptcha-solver/v2-luxury/hcaptcha.bundle.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://pay.openai.com/c/pay/*"
+      ],
+      "js": [
+        "src/config.js",
+        "src/content.js"
+      ],
+      "css": [
+        "ui/custom.css"
+      ],
       "run_at": "document_idle"
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "captcha-solvers/hcaptcha-solver/models/*.ort"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
   "action": {
-    "default_popup": "settings.html",
+    "default_popup": "ui/settings.html",
     "default_title": "Auto Click Settings"
   }
 }

@@ -1,0 +1,131 @@
+/* Custom CSS for Auto Click Card & Checkbox Extension */
+
+/* Card number opacity - controllable via settings */
+[data-input-opacity="0"] #cardNumber {
+  opacity: 0 !important;
+}
+
+[data-input-opacity="0.1"] #cardNumber {
+  opacity: 0.1 !important;
+}
+
+[data-input-opacity="0.3"] #cardNumber {
+  opacity: 0.3 !important;
+}
+
+[data-input-opacity="0.5"] #cardNumber {
+  opacity: 0.5 !important;
+}
+
+[data-input-opacity="0.8"] #cardNumber {
+  opacity: 0.8 !important;
+}
+
+[data-input-opacity="1"] #cardNumber {
+  opacity: 1 !important;
+}
+
+/* Keep expiry and CVC always visible */
+#cardExpiry,
+#cardCvc {
+  opacity: 1 !important;
+}
+
+/* This file contains opacity rules based on data-input-opacity attribute */
+
+/* Add light gray border to input fields */
+.App-Global-Fields .CheckoutInput,
+.BillingInfoForm .CheckoutInput,
+.App-Global-Fields .Select-source,
+.BillingInfoForm .Select-source {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+}
+
+/* Opacity levels based on data-input-opacity attribute on body */
+
+/* Contact Information - Email field */
+[data-input-opacity="0"] .App-Global-Fields input[type="email"],
+[data-input-opacity="0"] .App-Global-Fields .CheckoutInput.Input {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.1"] .App-Global-Fields input[type="email"],
+[data-input-opacity="0.1"] .App-Global-Fields .CheckoutInput.Input {
+  opacity: 0.1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.3"] .App-Global-Fields input[type="email"],
+[data-input-opacity="0.3"] .App-Global-Fields .CheckoutInput.Input {
+  opacity: 0.3 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.5"] .App-Global-Fields input[type="email"],
+[data-input-opacity="0.5"] .App-Global-Fields .CheckoutInput.Input {
+  opacity: 0.5 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.8"] .App-Global-Fields input[type="email"],
+[data-input-opacity="0.8"] .App-Global-Fields .CheckoutInput.Input {
+  opacity: 0.8 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="1"] .App-Global-Fields input[type="email"],
+[data-input-opacity="1"] .App-Global-Fields .CheckoutInput.Input {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* Billing Address - All input fields and selects */
+[data-input-opacity="0"] .BillingInfoForm input,
+[data-input-opacity="0"] .BillingInfoForm select,
+[data-input-opacity="0"] .BillingInfoForm .CheckoutInput,
+[data-input-opacity="0"] .BillingInfoForm .Select-source {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.1"] .BillingInfoForm input,
+[data-input-opacity="0.1"] .BillingInfoForm select,
+[data-input-opacity="0.1"] .BillingInfoForm .CheckoutInput,
+[data-input-opacity="0.1"] .BillingInfoForm .Select-source {
+  opacity: 0.1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.3"] .BillingInfoForm input,
+[data-input-opacity="0.3"] .BillingInfoForm select,
+[data-input-opacity="0.3"] .BillingInfoForm .CheckoutInput,
+[data-input-opacity="0.3"] .BillingInfoForm .Select-source {
+  opacity: 0.3 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.5"] .BillingInfoForm input,
+[data-input-opacity="0.5"] .BillingInfoForm select,
+[data-input-opacity="0.5"] .BillingInfoForm .CheckoutInput,
+[data-input-opacity="0.5"] .BillingInfoForm .Select-source {
+  opacity: 0.5 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="0.8"] .BillingInfoForm input,
+[data-input-opacity="0.8"] .BillingInfoForm select,
+[data-input-opacity="0.8"] .BillingInfoForm .CheckoutInput,
+[data-input-opacity="0.8"] .BillingInfoForm .Select-source {
+  opacity: 0.8 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+[data-input-opacity="1"] .BillingInfoForm input,
+[data-input-opacity="1"] .BillingInfoForm select,
+[data-input-opacity="1"] .BillingInfoForm .CheckoutInput,
+[data-input-opacity="1"] .BillingInfoForm .Select-source {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
